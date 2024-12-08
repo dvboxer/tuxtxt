@@ -1212,7 +1212,7 @@ void *tuxtxt_CacheThread(void *arg)
 		if (readcnt != sizeof(pes_packet))
 		{
 			if (tuxtxt_cache.debug)
-				printf ("TuxTxt_dvboxer: readerror readcnt=%zd /pes_packet %d\n",readcnt,sizeof(pes_packet));
+				printf ("TuxTxt: readerror readcnt=%zd /pes_packet %d\n",readcnt,sizeof(pes_packet));
 			continue;
 		}
 
