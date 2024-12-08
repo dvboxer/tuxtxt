@@ -5230,7 +5230,7 @@ void tuxtxt_RenderPage(tstRenderInfo* renderinfo)
 	{
 		/* reset update flag */
 		tuxtxt_cache.pageupdate = 0;
-		print("%s: renderinfo->subtitledelay %d\n"
+		print("%s: renderinfo->subtitledelay %d\n");
 		if (renderinfo->boxed && renderinfo->subtitledelay) 
 		{
 			subtitle_cache* c = NULL;
