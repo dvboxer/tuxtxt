@@ -5230,6 +5230,7 @@ void tuxtxt_RenderPage(tstRenderInfo* renderinfo)
 	{
 		/* reset update flag */
 		tuxtxt_cache.pageupdate = 0;
+		print("%s: renderinfo->subtitledelay %d\n"
 		if (renderinfo->boxed && renderinfo->subtitledelay) 
 		{
 			subtitle_cache* c = NULL;
@@ -5246,6 +5247,7 @@ void tuxtxt_RenderPage(tstRenderInfo* renderinfo)
 			}
 			if (c == NULL)
 			{
+				printf("c == NULL");
 				if (j == -1) // no more space in subtitlecache
 					return;
 				c= malloc(sizeof(subtitle_cache));
