@@ -1209,10 +1209,6 @@ void *tuxtxt_CacheThread(void *arg)
 		/* read packet */
 		ssize_t readcnt = read(tuxtxt_cache.dmx, &pes_packet, sizeof(pes_packet));
 
-		/* check again immediately */
-		if (readcnt==0)
-			readcnt = read(tuxtxt_cache.dmx, &pes_packet, sizeof(pes_packet));
-
 		if (readcnt != sizeof(pes_packet))
 		{
 			if (tuxtxt_cache.debug)
