@@ -5299,6 +5299,7 @@ void tuxtxt_RenderPage(tstRenderInfo* renderinfo)
 			{
 				if (renderinfo->subtitlecache[i] && renderinfo->subtitlecache[i]->valid && tv.tv_sec - renderinfo->subtitlecache[i]->tv_timestamp.tv_sec >= renderinfo->subtitledelay)
 				{
+					printf("tv.tv_sec %d renderinfo->subtitlecache[i]->tv_timestamp.tv_sec %d >= renderinfo->subtitledelay %d\n",tv.tv_sec,renderinfo->subtitlecache[i]->tv_timestamp.tv_sec,renderinfo->subtitledelay);
 					memcpy(renderinfo->page_char, renderinfo->subtitlecache[i]->page_char,40 * 25);
 					memcpy(renderinfo->page_atrb, renderinfo->subtitlecache[i]->page_atrb,40 * 25 * sizeof(tstPageAttr));
 					tuxtxt_DoRender(renderinfo,startrow,national_subset_bak);
